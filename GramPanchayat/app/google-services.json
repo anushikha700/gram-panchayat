@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "58820186455",
+    "firebase_url": "https://grampanchayat-f13d4.firebaseio.com",
+    "project_id": "grampanchayat-f13d4",
+    "storage_bucket": "grampanchayat-f13d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58820186455:android:22e29888e51c3ba2c92e12",
+        "android_client_info": {
+          "package_name": "com.example.grampanchayat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58820186455-qshaknr6ao3bi053tmaosk0dvtk9d8ug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv7yLLHixk53Sxpd_YsUWEbz9Qlv6lzdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58820186455-qshaknr6ao3bi053tmaosk0dvtk9d8ug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

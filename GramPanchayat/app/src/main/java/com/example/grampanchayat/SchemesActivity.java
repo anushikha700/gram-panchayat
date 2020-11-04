@@ -1,82 +1,108 @@
 package com.example.grampanchayat;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class SchemesActivity extends AppCompatActivity {
-    private RecyclerView schemeList;
-    private DatabaseReference mDatabase;
+    private RecyclerView recyclerView;
+    private DatabaseReference reference;
+
+   public TextView title;
+    ArrayList<Schemes> list;
+    MyAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schemes);
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("/Global");
-        mDatabase.keepSynced(true);
 
-        schemeList=(RecyclerView)findViewById(R.id.recycler_view);
-        schemeList.setHasFixedSize(true);
-        schemeList.setLayoutManager(new LinearLayoutManager(schemeList.getContext()));
-    }
+        // to display back button in action bar
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+      /*  ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#4ac29a")));
+        actionBar.setDisplayHomeAsUpEnabled(true);
+      */
 
-        FirebaseRecyclerOptions<Schemes> options =
-                new FirebaseRecyclerOptions.Builder<Schemes>()
-                        .setQuery(mDatabase, Schemes.class)
-                        .build();
+        //
 
-        FirebaseRecyclerAdapter adapter = new FirebaseRecyclerAdapter<Schemes, SchemesViewHolder>(options) {
+        reference= FirebaseDatabase.getInstance().getReference().child("Global");
+
+        recyclerView= (RecyclerView)findViewById(R.id.myRecycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        list= new ArrayList<Schemes>();
+
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public SchemesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.scheme_row, parent, false);
-
-                return new SchemesViewHolder(view);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
+                {
+                    Schemes s= dataSnapshot1.getValue(Schemes.class);
+                    list.add(s);
+                }
+                adapter= new MyAdapter(SchemesActivity.this,list);
+                recyclerView.setAdapter(adapter);
             }
 
             @Override
-            protected void onBindViewHolder(SchemesViewHolder viewHolder, int position, Schemes model) {
-                viewHolder.setTitle(model.getTitle());
-                viewHolder.setDesc(model.getDesc());
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(SchemesActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
-        };
-        schemeList.setAdapter(adapter);
-    }
+        });
 
-    public static class SchemesViewHolder extends RecyclerView.ViewHolder{
-        View mView;
-        public SchemesViewHolder(View itemView)
-        {
-            super(itemView);
-            mView=itemView;
 
-        }
-        public void setTitle(String title)
-        {
-            TextView scheme_title= (TextView)mView.findViewById(R.id.scheme_title);
-            scheme_title.setText(title);
-        }
-        public void setDesc(String desc)
-        {
-            TextView scheme_desc= (TextView)mView.findViewById(R.id.scheme_desc);
-            scheme_desc.setText(desc);
-        }
+        title= (TextView)findViewById(R.id.scheme_title);
+
+
+
+
 
 
     }
+// to send back to parent activity
+   // @Override
+    /*public boolean onNavigateUp()
+    {
+        finish();
+        return true;
+    }
+   */
+
+    public void onClick1(View view) {
+        try{
+            Intent intent = new Intent(SchemesActivity.this, Apply1Activity.class);
+            startActivity(intent);
+            finish();
+        } catch(Exception e) {
+            Log.e("Error",String.valueOf(e));
+        }
+
+
+    }
+
+
 }

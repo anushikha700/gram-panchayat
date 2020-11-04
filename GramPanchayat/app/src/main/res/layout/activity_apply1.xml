@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:layout_marginTop="100dp"
+    tools:context=".Apply1Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/scheme_title"
+        android:textSize="20dp"
+        android:text="@string/title"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:textColor="@color/cardview_dark_background"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/scheme_desc"
+        android:text="@string/description"
+        android:textSize="16dp"
+        android:typeface="sans"
+        android:textColor="@color/cardview_dark_background"
+        />
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="@color/teal_700"
+        android:text="Apply"
+        android:layout_marginTop="100dp" />
+
+</LinearLayout>

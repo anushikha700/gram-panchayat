@@ -4,6 +4,10 @@ public class Schemes {
     private String title;
     private String desc;
 
+    public Schemes()
+    {
+
+    }
     public Schemes(String title, String desc)
     {
         this.title= title;
@@ -25,8 +29,5 @@ public class Schemes {
     public void setDesc(String desc) {
         this.desc = desc;
     }
-    public Schemes()
-    {
 
-    }
 }

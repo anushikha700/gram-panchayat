@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GramPanchayat">
-        <activity
-            android:name=".SchemesActivity"
-            android:theme="@style/Login">
-
-        </activity>
+        <activity android:name=".Apply1Activity"
+            android:parentActivityName=".SchemesActivity"></activity>
+        <activity android:name=".SchemesActivity"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Login" />

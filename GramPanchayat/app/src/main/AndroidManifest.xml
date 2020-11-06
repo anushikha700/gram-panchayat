@@ -9,10 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GramPanchayat">
-        <activity android:name=".Apply1Activity"
-            android:parentActivityName=".SchemesActivity"></activity>
-        <activity android:name=".SchemesActivity"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".TrackActivity"></activity>
+        <activity
+            android:name=".Apply2Activity"
+            android:parentActivityName=".Apply1Activity"
+            android:theme="@style/TransparentActionBar" />
+        <activity
+            android:name=".Apply1Activity"
+            android:parentActivityName=".SchemesActivity"
+            android:theme="@style/TransparentActionBar" />
+        <activity
+            android:name=".SchemesActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/TransparentActionBar" />
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Login" />

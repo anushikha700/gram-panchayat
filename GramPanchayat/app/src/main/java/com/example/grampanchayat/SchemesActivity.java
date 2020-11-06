@@ -33,7 +33,7 @@ public class SchemesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private DatabaseReference reference;
 
-   public TextView title;
+
     ArrayList<Schemes> list;
     MyAdapter adapter;
     @Override
@@ -41,16 +41,9 @@ public class SchemesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schemes);
 
-        // to display back button in action bar
 
-      /*  ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#4ac29a")));
-        actionBar.setDisplayHomeAsUpEnabled(true);
-      */
 
-        //
-
-        reference= FirebaseDatabase.getInstance().getReference().child("Global");
+        reference= FirebaseDatabase.getInstance().getReference().child("Schemes");
 
         recyclerView= (RecyclerView)findViewById(R.id.myRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -75,28 +68,24 @@ public class SchemesActivity extends AppCompatActivity {
         });
 
 
-        title= (TextView)findViewById(R.id.scheme_title);
-
-
-
-
-
-
     }
-// to send back to parent activity
-   // @Override
-    /*public boolean onNavigateUp()
-    {
-        finish();
-        return true;
-    }
-   */
+
 
     public void onClick1(View view) {
+
         try{
+            // To get text from textview in string
+           TextView tv2= (TextView)view;
+            String str= tv2.getText().toString();
+            System.out.println("title="+str);
+
             Intent intent = new Intent(SchemesActivity.this, Apply1Activity.class);
+
+            //To send some string to other activity using intent
+            intent.putExtra("EXTRA_MESSAGE",str);
             startActivity(intent);
-            finish();
+            // finish();
+
         } catch(Exception e) {
             Log.e("Error",String.valueOf(e));
         }

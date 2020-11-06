@@ -2,4 +2,6 @@
     <string name="app_name">GramPanchayat</string>
     <string name="title">Title:</string>>
     <string name="description">Description:</string>
+    <string name="eligibility">Eligibility:</string>
+    <string name="category">Category:</string>
 </resources>

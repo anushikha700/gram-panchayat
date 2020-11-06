@@ -1,47 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="15dp"
     android:layout_marginTop="100dp"
     tools:context=".Apply1Activity">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/scheme_title"
-        android:textSize="20dp"
+        android:id="@+id/apply1_title"
+        android:textSize="25dp"
         android:text="@string/title"
         android:typeface="sans"
         android:textStyle="bold"
         android:textColor="@color/cardview_dark_background"
         />
 
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/scheme_desc"
+        android:id="@+id/apply1_desc"
         android:text="@string/description"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:typeface="sans"
         android:textColor="@color/cardview_dark_background"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/category"
+        android:text="Category:"
+        android:textSize="20dp"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:textColor="@color/cardview_dark_background"
+        />
+
+    <TextView
+        android:id="@+id/apply1_category"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/category"
+        android:text="@string/category"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:typeface="sans" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="480dp"
+
+        android:layout_marginLeft="10dp"
+        android:id="@+id/eligible"
+        android:text="Eligibility:"
+        android:textSize="20dp"
+        android:typeface="sans"
+        android:textStyle="bold"
+
+
+        android:textColor="@color/cardview_dark_background"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/apply1_eligible"
+        android:text="@string/eligibility"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/eligible"
+        android:typeface="sans"
+        android:textColor="@color/cardview_dark_background"
+        />
     <Button
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:textColor="@color/teal_700"
+        android:layout_marginTop="600dp"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
         android:text="Apply"
-        android:layout_marginTop="100dp" />
+        android:textSize="20dp"
+        android:id="@+id/apply"
+        />
 
-</LinearLayout>
+</RelativeLayout>

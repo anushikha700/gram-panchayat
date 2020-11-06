@@ -19,9 +19,9 @@
         <item name="colorPrimaryDark">@color/mid1</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="SchemeStyle" parent="Theme.AppCompat.Light">
-        <item name="windowActionBar">true</item>
-        <item name="colorPrimaryDark">@color/mid1</item>
-        <item name="windowNoTitle">true</item>
+    <style name="TransparentActionBar" parent="Theme.AppCompat.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
     </style>
 </resources>

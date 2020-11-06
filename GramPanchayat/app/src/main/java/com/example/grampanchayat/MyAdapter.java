@@ -32,6 +32,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.title.setText(schemes.get(position).getTitle());
         holder.desc.setText(schemes.get(position).getDesc());
+
     }
 
 

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Apply2Activity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Enter details to apply:"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_email"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:id="@+id/apply_fname"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:id="@+id/apply_lname"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone number"
+        android:inputType="phone"
+        android:id="@+id/apply_phone"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Country"
+        android:inputType="text"
+        android:id="@+id/apply_country"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:inputType="text"
+        android:id="@+id/apply_city"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Pincode"
+        android:inputType="number"
+        android:id="@+id/apply_pincode"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="House No."
+        android:inputType="text"
+        android:id="@+id/apply_house"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:layout_marginTop="30dp"
+        android:id="@+id/submit"/>
+
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_progressBar"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/teal_700"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="eGram Panchayat"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_marginBottom="140dp"
+        android:textAlignment="center" />
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="@color/start2"
+        android:text="Profile"
+        android:layout_marginTop="100dp"
+        android:id="@+id/profile"/>
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="@color/start2"
+        android:text="View Schemes"
+        android:layout_marginTop="20dp"
+        android:id="@+id/view_schemes"/>
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="@color/start2"
+        android:text="Track Applications"
+        android:layout_marginTop="20dp"
+        android:id="@+id/track_applications"/>
+
+
+    <Button
+        android:id="@+id/sign_out"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/start2"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:text="sign out" />
+
+
+</LinearLayout>

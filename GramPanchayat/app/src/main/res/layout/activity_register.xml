@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="eGram Panchayat"
-        android:textColor="@color/cardview_dark_background"
+        android:textColor="@color/white"
         android:textSize="40sp"
         android:layout_marginBottom="140dp"
         android:textAlignment="center" />
@@ -65,7 +65,7 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/start2"
         android:text="Register"
         android:layout_marginTop="20dp"
         android:id="@+id/register_button"/>
@@ -74,7 +74,7 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/white"
         android:text="Login"
         android:layout_marginTop="20dp"
         android:id="@+id/reg_login_button"/>

@@ -77,7 +77,7 @@ public class SchemesActivity extends AppCompatActivity {
             // To get text from textview in string
            TextView tv2= (TextView)view;
             String str= tv2.getText().toString();
-            System.out.println("title="+str);
+            System.out.println("title in schemes activity="+str);
 
             Intent intent = new Intent(SchemesActivity.this, Apply1Activity.class);
 

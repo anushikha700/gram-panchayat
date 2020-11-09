@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".AdminLoginActivity"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/background"
-    tools:context=".LoginActivity">
+    android:background="@drawable/background">
 
     <TextView
         android:layout_height="wrap_content"
@@ -21,9 +21,9 @@
     <EditText
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:id="@+id/login_email"
-        android:inputType="textEmailAddress"
+        android:hint="username"
+        android:id="@+id/admin_login_username"
+        android:inputType="text"
         android:textColorHint="@android:color/white"
         android:backgroundTint="@android:color/white"
         android:textColor="@android:color/white"/>
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:id="@+id/login_password"
+        android:id="@+id/admin_login_password"
         android:layout_marginTop="10dp"
         android:textColorHint="@android:color/white"
         android:backgroundTint="@android:color/white"
@@ -47,7 +47,7 @@
         android:textColor="@android:color/white"
         android:layout_marginRight="60dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/login_checkbox"/>
+        android:id="@+id/admin_login_checkbox"/>
 
     <Button
         android:layout_width="380dp"
@@ -56,27 +56,19 @@
         android:textColor="@color/start2"
         android:text="Login"
         android:layout_marginTop="20dp"
-        android:id="@+id/login_button"/>
+        android:id="@+id/admin_login_button"/>
 
-    <Button
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:textColor="@color/white"
-        android:text="Register"
-        android:layout_marginTop="20dp"
-        android:id="@+id/log_register_button"/>
+
 
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login_progressBar"
+        android:id="@+id/admin_login_progressBar"
         android:indeterminate="true"
         android:indeterminateTint="@android:color/white"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:visibility="invisible"
         android:layout_marginTop="20dp"/>
-
 
 
 

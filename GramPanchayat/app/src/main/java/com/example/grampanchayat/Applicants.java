@@ -1,12 +1,12 @@
 package com.example.grampanchayat;
 
 public class Applicants {
-    private String email, fname, lname, ph_no, country, city, pincode, house_no ;
+    private String email, fname, lname, ph_no, country, city, pincode, house_no, applied_for, status, aid;
 
     public Applicants() {
     }
 
-    public Applicants(String email, String fname, String lname, String ph_no, String country, String city, String pincode, String house_no) {
+    public Applicants(String email, String fname, String lname, String ph_no, String country, String city, String pincode, String house_no, String applied_for, String status, String aid) {
         this.email = email;
         this.fname = fname;
         this.lname = lname;
@@ -15,7 +15,9 @@ public class Applicants {
         this.city = city;
         this.pincode = pincode;
         this.house_no = house_no;
-
+        this.applied_for=applied_for;
+        this.status = status;
+        this.aid=aid;
     }
 
     public String getEmail() {
@@ -82,5 +84,27 @@ public class Applicants {
         this.house_no = house_no;
     }
 
+    public String getApplied_for() {
+        return applied_for;
+    }
 
+    public void setApplied_for(String applied_for) {
+        this.applied_for = applied_for;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getAid() {
+        return aid;
+    }
+
+    public void setAid(String aid) {
+        this.aid = aid;
+    }
 }

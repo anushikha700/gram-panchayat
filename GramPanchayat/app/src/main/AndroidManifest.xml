@@ -9,7 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GramPanchayat">
-        <activity android:name=".TrackActivity"></activity>
+        <activity android:name=".AdminMainActivity"
+            android:theme="@style/TransparentActionBar"></activity>
+        <activity android:name=".AdminLoginActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/TransparentActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TrackActivity"
+            android:parentActivityName=".Main2Activity"
+            android:theme="@style/TransparentActionBar" />
         <activity
             android:name=".Apply2Activity"
             android:parentActivityName=".Apply1Activity"
@@ -20,23 +37,19 @@
             android:theme="@style/TransparentActionBar" />
         <activity
             android:name=".SchemesActivity"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Main2Activity"
             android:theme="@style/TransparentActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/Login" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/TransparentActionBar" />
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/Login" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/TransparentActionBar" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".Main2Activity"
+            android:theme="@style/Login" />
     </application>
 
 </manifest>

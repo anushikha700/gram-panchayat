@@ -14,9 +14,15 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Login" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Login1" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="colorPrimaryDark">@color/mid1</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Login" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/mid2</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="TransparentActionBar" parent="Theme.AppCompat.Light">

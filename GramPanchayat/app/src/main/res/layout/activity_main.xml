@@ -9,43 +9,40 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     >
-
-    <Button
-        android:layout_width="380dp"
+    <TextView
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:textColor="@color/teal_700"
-        android:text="Profile"
-        android:layout_marginTop="100dp"
-        android:id="@+id/profile"/>
+        android:layout_width="match_parent"
+        android:text="eGram Panchayat"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_marginBottom="140dp"
+        android:textAlignment="center" />
 
-    <Button
-        android:layout_width="380dp"
+    <ImageButton
+        android:id="@+id/admin_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:textColor="@color/teal_700"
-        android:text="View Schemes"
-        android:layout_marginTop="20dp"
-        android:id="@+id/view_schemes"/>
 
-    <Button
-        android:layout_width="380dp"
+        android:src="@drawable/admin_icon"/>
+
+    <TextView
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:textColor="@color/teal_700"
-        android:text="Track Applications"
-        android:layout_marginTop="20dp"
-        android:id="@+id/track_applications"/>
+        android:layout_width="wrap_content"
+        android:text="Admin Login"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
 
-
-    <Button
-        android:id="@+id/sign_out"
-        android:layout_width="380dp"
+    <ImageButton
+        android:id="@+id/user_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/teal_700"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/white"
-        android:text="sign out" />
+        android:layout_marginTop="50dp"
+        android:src="@drawable/man_icon"/>
 
-
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:text="User Login"
+        android:textSize="20dp"/>
 </LinearLayout>

@@ -33,7 +33,7 @@
         android:inputType="textPersonName"
         android:id="@+id/apply_fname"
         android:layout_marginTop="10dp"
-
+        android:backgroundTint="@color/start2"
         />
 
     <EditText
@@ -43,6 +43,7 @@
         android:inputType="textPersonName"
         android:id="@+id/apply_lname"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
         />
 
     <EditText
@@ -52,7 +53,7 @@
         android:inputType="phone"
         android:id="@+id/apply_phone"
         android:layout_marginTop="10dp"
-
+        android:backgroundTint="@color/start2"
         />
 
     <EditText
@@ -62,6 +63,7 @@
         android:inputType="text"
         android:id="@+id/apply_country"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
         />
 
     <EditText
@@ -71,6 +73,7 @@
         android:inputType="text"
         android:id="@+id/apply_city"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
         />
 
     <EditText
@@ -80,6 +83,7 @@
         android:inputType="number"
         android:id="@+id/apply_pincode"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
         />
 
     <EditText
@@ -89,6 +93,7 @@
         android:inputType="text"
         android:id="@+id/apply_house"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
         />
 
 
@@ -96,7 +101,7 @@
     <Button
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:background="@color/teal_700"
+        android:background="@color/start2"
         android:textColor="@color/white"
         android:text="Submit"
         android:layout_marginTop="30dp"
@@ -107,9 +112,9 @@
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login_progressBar"
+        android:id="@+id/apply2_progressBar"
         android:indeterminate="true"
-        android:indeterminateTint="@color/teal_700"
+        android:indeterminateTint="@color/start2"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:visibility="invisible"
         android:layout_marginTop="20dp"/>

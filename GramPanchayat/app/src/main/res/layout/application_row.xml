@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="240dp"
+       android:orientation="vertical"
+       android:layout_marginTop="50dp"
+       android:background="@drawable/cardbackground">
+
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:textStyle="bold"
+           android:text="Application ID:"
+           android:typeface="sans"
+           android:textSize="20dp" />
+
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:textSize="20dp"
+           android:typeface="sans"
+           android:id="@+id/aid2"
+           />
+
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:textStyle="bold"
+           android:text="Applied For:"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:typeface="sans"
+           android:textSize="20dp" />
+
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:textSize="20dp"
+           android:typeface="sans"
+           android:id="@+id/apply_title2"
+           />
+
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:textStyle="bold"
+           android:text="Application Status:"
+           android:typeface="sans"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:textSize="20dp" />
+
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:textSize="20dp"
+           android:typeface="sans"
+           android:id="@+id/status2"/>
+
+   </LinearLayout>
+
+
+
+</LinearLayout>

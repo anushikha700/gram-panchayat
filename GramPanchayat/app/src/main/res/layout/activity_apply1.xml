@@ -97,7 +97,7 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="600dp"
-        android:background="@color/teal_700"
+        android:background="@color/start2"
         android:textColor="@color/white"
         android:text="Apply"
         android:textSize="20dp"

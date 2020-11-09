@@ -26,7 +26,7 @@ public class Apply1Activity extends AppCompatActivity {
     private TextView txt_category;
     private TextView txt_eligible;
     private Button apply;
-
+    Schemes schemes;
 
 
     @Override
@@ -38,9 +38,10 @@ public class Apply1Activity extends AppCompatActivity {
         // To get message from activity sent using intent
         String title_clicked=intent.getStringExtra("EXTRA_MESSAGE");
 
-        Schemes schemes= new Schemes();
+        schemes= new Schemes();
+        schemes.setTitle(title_clicked);
         String title_clicked2= schemes.getTitle();
-        System.out.println("title clicked="+title_clicked2);
+        System.out.println("title clicked in appply1="+title_clicked2);
 
         txt_title=(TextView) findViewById(R.id.apply1_title);
         txt_desc=(TextView) findViewById(R.id.apply1_desc);

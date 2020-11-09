@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSchemesActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Enter details of new schemes:"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"
+        android:id="@+id/sc_title"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/start2"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Category"
+        android:inputType="text"
+        android:id="@+id/sc_category"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="text"
+        android:id="@+id/sc_desc"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
+        />
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Eligiblity criteria"
+        android:inputType="text"
+        android:id="@+id/sc_eligiblity"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/start2"
+        />
+
+
+
+
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@color/start2"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:layout_marginTop="50dp"
+        android:id="@+id/add_scheme"/>
+
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sc_progressBar"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/start2"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:visibility="invisible"
+        android:layout_marginTop="50dp"/>
+
+
+
+
+</LinearLayout>

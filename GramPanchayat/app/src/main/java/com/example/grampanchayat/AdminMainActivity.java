@@ -15,7 +15,6 @@ public class AdminMainActivity extends AppCompatActivity {
     private Button signout;
     private FirebaseAuth auth;
     private Button admin_view_schemes;
-    private Button view_applications;
     private Button add_schemes;
 
     @Override
@@ -23,15 +22,14 @@ public class AdminMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
 
-        auth= FirebaseAuth.getInstance();
+       // auth= FirebaseAuth.getInstance();
         signout= findViewById(R.id.admin_sign_out);
         admin_view_schemes= findViewById(R.id.admin_view_schemes);
-        view_applications=findViewById(R.id.view_applications);
         add_schemes= findViewById(R.id.add_schemes);
+
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                auth.signOut();
 
                 Intent intent =new Intent(AdminMainActivity.this,AdminLoginActivity.class);
                 startActivity(intent);
@@ -40,16 +38,27 @@ public class AdminMainActivity extends AppCompatActivity {
         });
 
 
+        admin_view_schemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(AdminMainActivity.this,AdminSchemesActivity.class);
+                startActivity(intent);
+               // finish();
+            }
+        });
+
+        System.out.println("I am ready to go");
+        add_schemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("yea i am going");
+                Intent intent =new Intent(AdminMainActivity.this,AddSchemesActivity.class);
+                startActivity(intent);
+               // finish();
+            }
+        });
+
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currentUser= FirebaseAuth.getInstance().getCurrentUser();
-        if(currentUser==null) {
-            Intent intent =new Intent(AdminMainActivity.this,AdminLoginActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
+
 }

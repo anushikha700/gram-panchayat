@@ -9,11 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GramPanchayat">
-        <activity android:name=".AdminMainActivity"
+        <activity android:name=".AddSchemesActivity"
+            android:parentActivityName=".AdminMainActivity"
             android:theme="@style/TransparentActionBar"></activity>
-        <activity android:name=".AdminLoginActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name=".ViewApplicantsActivity"
+            android:parentActivityName=".AdminSchemesActivity"
             android:theme="@style/TransparentActionBar"/>
+        <activity
+            android:name=".AdminViewActivity"
+            android:parentActivityName=".AdminSchemesActivity"
+            android:theme="@style/TransparentActionBar" />
+        <activity
+            android:name=".AdminSchemesActivity"
+            android:parentActivityName=".AdminMainActivity"
+            android:theme="@style/TransparentActionBar" />
+        <activity
+            android:name=".AdminMainActivity"
+            android:theme="@style/TransparentActionBar" />
+        <activity
+            android:name=".AdminLoginActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/TransparentActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Login">

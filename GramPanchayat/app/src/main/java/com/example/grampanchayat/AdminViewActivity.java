@@ -3,7 +3,6 @@ package com.example.grampanchayat;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,21 +17,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-
-public class Apply1Activity extends AppCompatActivity {
+public class AdminViewActivity extends AppCompatActivity {
 
     private TextView txt_title;
     private TextView txt_desc;
     private TextView txt_category;
     private TextView txt_eligible;
-    private Button apply;
+    private Button viewApplicants;
     Schemes schemes;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apply1);
+        setContentView(R.layout.activity_admin_view);
 
         Intent intent =getIntent();
         // To get message from activity sent using intent
@@ -48,7 +46,7 @@ public class Apply1Activity extends AppCompatActivity {
         txt_category=(TextView)findViewById(R.id.apply1_category);
         txt_eligible= (TextView)findViewById(R.id.apply1_eligible);
 
-       // reference= FirebaseDatabase.getInstance().getReference().child("Global");
+        // reference= FirebaseDatabase.getInstance().getReference().child("Global");
 
         // query for getting descriptiion where title is given
         Query query = FirebaseDatabase.getInstance().getReference().child("Schemes")
@@ -62,35 +60,35 @@ public class Apply1Activity extends AppCompatActivity {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    for(DataSnapshot postSnapshot: dataSnapshot.getChildren())
-                    {
-                        Schemes schemes= postSnapshot.getValue(Schemes.class);
-                        String title= schemes.getTitle();
-                        String desc= schemes.getDesc();
-                        String category= schemes.getCategory();
-                        String eligible= schemes.getEligiblity();
-                        txt_title.setText(title);
-                        txt_desc.setText(desc);
-                        txt_category.setText(category);
-                        txt_eligible.setText(eligible);
+                for(DataSnapshot postSnapshot: dataSnapshot.getChildren())
+                {
+                    Schemes schemes= postSnapshot.getValue(Schemes.class);
+                    String title= schemes.getTitle();
+                    String desc= schemes.getDesc();
+                    String category= schemes.getCategory();
+                    String eligible= schemes.getEligiblity();
+                    txt_title.setText(title);
+                    txt_desc.setText(desc);
+                    txt_category.setText(category);
+                    txt_eligible.setText(eligible);
 
-                    }
+                }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Apply1Activity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminViewActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
 
-        apply= (Button)findViewById(R.id.apply);
-        apply.setOnClickListener(new View.OnClickListener() {
+        viewApplicants= (Button)findViewById(R.id.viewApplications);
+        viewApplicants.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Apply1Activity.this, Apply2Activity.class);
+                Intent intent = new Intent(AdminViewActivity.this, ViewApplicantsActivity.class);
 
                 //To send some string to other activity using intent
-                 intent.putExtra("EXTRA_MESSAGE",title_clicked);
+                intent.putExtra("EXTRA_MESSAGE",title_clicked);
                 startActivity(intent);
                 // finish();
             }
@@ -99,7 +97,6 @@ public class Apply1Activity extends AppCompatActivity {
 
 
     }
-
 
 
 }

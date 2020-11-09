@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this, AdminMainActivity.class);
+                Intent intent= new Intent(MainActivity.this, AdminLoginActivity.class);
                 startActivity(intent);
                 // finish();
             }

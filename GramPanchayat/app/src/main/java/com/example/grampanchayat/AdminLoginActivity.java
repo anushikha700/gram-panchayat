@@ -30,7 +30,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AdminLoginActivity extends AppCompatActivity {
 
-    //private EditText loginEmailtext;
     private EditText loginPasswordtext;
     private Button loginbtn;
     private ProgressBar progressBar;
@@ -77,7 +76,7 @@ public class AdminLoginActivity extends AppCompatActivity {
 
                     progressBar.setVisibility(View.VISIBLE);
 
-                    DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference();
+                    /*DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference();
 
                     databaseReference.child("admin").addValueEventListener(new ValueEventListener() {
                         @Override
@@ -116,7 +115,27 @@ public class AdminLoginActivity extends AppCompatActivity {
 
 
 
-
+*/               String loginUser=loginUsername.getText().toString();
+                String loginPass=loginPasswordtext.getText().toString();
+                System.out.println("user="+loginUser);
+                System.out.println("pass="+loginPass);
+                if(loginUser.equals("admin"))
+                {
+                    if(loginPass.equals("admin123"))
+                    {
+                        Intent intent =new Intent(AdminLoginActivity.this, AdminMainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"Incorrect Password",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Incorrect Username",Toast.LENGTH_SHORT).show();
+                }
 
 
             }

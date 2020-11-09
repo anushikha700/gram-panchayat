@@ -29,7 +29,7 @@
     <EditText
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:hint="First Name"
+        android:hint="Applicant's First Name"
         android:inputType="textPersonName"
         android:id="@+id/apply_fname"
         android:layout_marginTop="10dp"
@@ -39,7 +39,7 @@
     <EditText
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:hint="Last Name"
+        android:hint="Applicant's Last Name"
         android:inputType="textPersonName"
         android:id="@+id/apply_lname"
         android:layout_marginTop="10dp"
@@ -96,6 +96,14 @@
         android:backgroundTint="@color/start2"
         />
 
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
+        android:textColor="@color/start2"
+        android:text="Select required documents to upload"
+        android:layout_marginTop="30dp"
+        android:id="@+id/selectfile"/>
 
 
     <Button

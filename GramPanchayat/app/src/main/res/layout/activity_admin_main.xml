@@ -36,14 +36,6 @@
         android:layout_marginTop="20dp"
         android:id="@+id/add_schemes"/>
 
-    <Button
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:textColor="@color/start2"
-        android:text="View Applications"
-        android:layout_marginTop="20dp"
-        android:id="@+id/view_applications"/>
 
 
     <Button
